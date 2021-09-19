@@ -9,13 +9,13 @@ import javax.interceptor.InvocationContext;
 @Interceptor
 public class TimerInterceptor {
     @AroundInvoke
-    public Object profile(InvocationContext ic) throws Exception{
-        long initTime = System.currentTimeMillis();
+    public Object profile(InvocationContext invocationContext) throws Exception{
+        long initTime = System.nanoTime();
         try {
-            return ic.proceed();
+            return invocationContext.proceed();
         }finally{
-            long Time = System.currentTimeMillis()- initTime;
-            System.out.println(ic.getMethod()+ "completed for " + Time + " ms.");
+            long Time = System.nanoTime()- initTime;
+            System.out.println(invocationContext.getMethod()+ "completed for " + Time + " ns.");
         }
     }
 }

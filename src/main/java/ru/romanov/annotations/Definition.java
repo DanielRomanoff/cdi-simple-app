@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER, ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.FIELD})
 public @interface Definition {
 }

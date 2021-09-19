@@ -1,7 +1,9 @@
 package ru.romanov.component;
 
 import lombok.*;
+import ru.romanov.annotations.Definition;
 import ru.romanov.annotations.Gauss;
+import ru.romanov.annotations.Minor;
 import ru.romanov.annotations.Timer;
 import ru.romanov.interfaces.IRankFinder;
 
@@ -16,7 +18,7 @@ public class SimpleMatrix {
     double[][] matrix;
 
     @Inject
-    @Gauss
+    @Minor
     IRankFinder finder;
 
     @Timer

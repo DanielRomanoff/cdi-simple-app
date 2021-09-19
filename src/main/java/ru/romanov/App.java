@@ -9,10 +9,14 @@ import javax.enterprise.inject.se.SeContainerInitializer;
  * Создать компонент CDI, выполняющий нахождение ранга матрицы различными способами (по определению, методом окаймляющих миноров, по методу Гаусса).
  * Выбор способа нахождение ранга матрицы должен быть реализован через указание соответствующей аннотации или посредством указания класса в XML файле.
  * Посредством перехватчиков провести сравнение по времени эффективности различных методов.
+ *
+ * Results:
+ * Gauss: 31820
+ * Definition: 28900
+ * Border minors: 67919100
  */
 
 public class App {
-
     public static void main(String[] args) {
         SeContainerInitializer initializer = SeContainerInitializer.newInstance();
         SeContainer container = initializer.initialize();
